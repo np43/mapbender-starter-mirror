@@ -7,7 +7,7 @@
         },
         mapWidgetPromise: null,
         _create: function() {
-            this.mapWidgetPromise = Mapbender.elementRegistry.waitReady(this.options.target);
+            this.mapWidgetPromise = Mapbender.elementRegistry.waitCreated(this.options.target);
             $('form input', this.element).on('click', this._onRadioClick.bind(this));
         },
         _onRadioClick: function(evt) {
