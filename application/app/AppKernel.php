@@ -37,6 +37,9 @@ class AppKernel extends Mapbender\BaseKernel
             // OWSProxy3 bundles
             new OwsProxy3\CoreBundle\OwsProxy3CoreBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+
+            // demo bundle Openlayers 4
+            new \Mapbender\Ol4DemoBundle\MapbenderOl4DemoBundle(),
         );
 
         $this->addNameSpaceBundles($bundles, 'Mapbender\\');
