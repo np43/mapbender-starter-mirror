@@ -1,7 +1,7 @@
 (function ($) {
     'use strict';
 
-    $.widget('mapbender.mbCanvasRotation', $.mapbender.mbBaseElement, {
+    $.widget('mapbender.mbCanvasRotation', {
         options: {
             target: null
         },

@@ -31,7 +31,6 @@ class CanvasRotation extends Element
     {
         return array(
             'js' => array(
-                '@MapbenderCoreBundle/Resources/public/mapbender.element.base.js',
                 '@MapbenderOl4DemoBundle/Resources/public/element/canvas_rotation.js',
             ),
         );
