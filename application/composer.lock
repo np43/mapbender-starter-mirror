@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "469a59b8e7c94024de1d58c7ea8d2309",
+    "content-hash": "cd234c08c421132fc674748108a8fbc9",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1938,6 +1938,50 @@
             "time": "2018-06-26T09:53:22+00:00"
         },
         {
+            "name": "mapbender/data-manager",
+            "version": "dev-ol4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/data-manager.git",
+                "reference": "6137d4ec155dbcab18065e77a347c563ae06e501"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/6137d4ec155dbcab18065e77a347c563ae06e501",
+                "reference": "6137d4ec155dbcab18065e77a347c563ae06e501",
+                "shasum": ""
+            },
+            "require": {
+                "blueimp/jquery-file-upload": "9.*",
+                "mapbender/data-source": "0.x",
+                "mapbender/vis-ui.js": "dev-ol4",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\DataManagerBundle\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "andriy.oblivantsev@wheregroup.com"
+                }
+            ],
+            "description": "Mapbender data manager",
+            "keywords": [
+                "Data Manager",
+                "data",
+                "mapbender"
+            ],
+            "time": "2019-08-08T08:10:43+00:00"
+        },
+        {
             "name": "mapbender/data-source",
             "version": "0.1.11",
             "source": {
@@ -1986,26 +2030,29 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.70",
+            "version": "dev-release/1.4-withDataManager",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "474721771d06701cbeb02c9894e1e54af7c794ad"
+                "reference": "e6cd5244f1fc353deb27170ac357495a447ccac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/474721771d06701cbeb02c9894e1e54af7c794ad",
-                "reference": "474721771d06701cbeb02c9894e1e54af7c794ad",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/e6cd5244f1fc353deb27170ac357495a447ccac9",
+                "reference": "e6cd5244f1fc353deb27170ac357495a447ccac9",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
+                "debugteam/bootstrap-colorpicker": "1.x",
+                "mapbender/data-manager": "dev-ol4",
                 "mapbender/data-source": "0.*",
-                "mapbender/vis-ui.js": "*",
+                "mapbender/ol4-extensions": "dev-master",
+                "phayes/geophp": "1.2",
                 "php": ">=5.3.3"
             },
-            "conflict": {
-                "mapbender/mapbender": "<3.0.8"
+            "require-dev": {
+                "mapbender/data-source": "@dev"
             },
             "type": "library",
             "extra": {
@@ -2015,8 +2062,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Mapbender\\DigitizerBundle": "."
+                "psr-4": {
+                    "Mapbender\\DigitizerBundle\\": "."
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2040,7 +2087,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2019-05-13T07:49:43+00:00"
+            "time": "2019-08-08T08:10:29+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -2093,12 +2140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "5508a906773eed42c857e45e7c4469fe5bda03be"
+                "reference": "84084581f26390c793c43abe20665c5fc07fdbb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/5508a906773eed42c857e45e7c4469fe5bda03be",
-                "reference": "5508a906773eed42c857e45e7c4469fe5bda03be",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/84084581f26390c793c43abe20665c5fc07fdbb4",
+                "reference": "84084581f26390c793c43abe20665c5fc07fdbb4",
                 "shasum": ""
             },
             "require": {
@@ -2111,7 +2158,7 @@
                 "mapbender/mapbender-icons": "1.x",
                 "mapbender/mapquery": "1.x",
                 "mapbender/owsproxy": "^3.0.6.2@dev",
-                "mapbender/vis-ui.js": "~0.0",
+                "mapbender/vis-ui.js": "*",
                 "php": ">=5.4.30",
                 "setasign/fpdi-fpdf": "1.6.*",
                 "symfony/symfony": "^2.3",
@@ -2123,7 +2170,6 @@
             },
             "conflict": {
                 "mapbender/data-source": "<0.1.11",
-                "mapbender/digitizer": "<1.1.68",
                 "mapbender/wmts": "*"
             },
             "type": "library",
@@ -2149,7 +2195,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-06-11T12:02:53+00:00"
+            "time": "2019-08-08T08:36:03+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2253,6 +2299,38 @@
             "time": "2018-01-04T14:15:31+00:00"
         },
         {
+            "name": "mapbender/ol4-extensions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/ol4-extensions.git",
+                "reference": "f01afe890a73331101d2cee3d2e66622ce13a2dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/ol4-extensions/zipball/f01afe890a73331101d2cee3d2e66622ce13a2dd",
+                "reference": "f01afe890a73331101d2cee3d2e66622ce13a2dd",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Felix Rauch",
+                    "email": "felix.rauch@wheregroup.com"
+                }
+            ],
+            "description": "Create Extension for Openlayers 4",
+            "keywords": [
+                "OpenLayers",
+                "mapbender"
+            ],
+            "time": "2019-08-01T10:49:44+00:00"
+        },
+        {
             "name": "mapbender/owsproxy",
             "version": "v3.1.0",
             "source": {
@@ -2296,16 +2374,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.2.0",
+            "version": "dev-ol4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "50dbee1950a49ab3cbf08a401e2d571877259176"
+                "reference": "446164095222c828fe896db25c832a8ac042aa9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/50dbee1950a49ab3cbf08a401e2d571877259176",
-                "reference": "50dbee1950a49ab3cbf08a401e2d571877259176",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/446164095222c828fe896db25c832a8ac042aa9f",
+                "reference": "446164095222c828fe896db25c832a8ac042aa9f",
                 "shasum": ""
             },
             "require": {
@@ -2333,16 +2411,6 @@
             },
             "type": "component",
             "extra": {
-                "component": {
-                    "scripts": [
-                        "src/js/utils/*.js",
-                        "src/js/elements/*.js",
-                        "src/js/jquery.form.generator.js"
-                    ],
-                    "styles": [
-                        "src/styles/base.css"
-                    ]
-                },
                 "branch-alias": {
                     "dev-master": "0.0.x-dev"
                 }
@@ -2364,7 +2432,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2019-02-04T12:14:52+00:00"
+            "time": "2019-08-08T08:16:14+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -6291,10 +6359,25 @@
             "time": "2018-12-25T11:19:39+00:00"
         }
     ],
-    "aliases": [],
-    "minimum-stability": "stable",
+    "aliases": [
+        {
+            "alias": "1.1.70",
+            "alias_normalized": "1.1.70.0",
+            "version": "dev-release/1.4-withDataManager",
+            "package": "mapbender/digitizer"
+        },
+        {
+            "alias": "0.2.0",
+            "alias_normalized": "0.2.0.0",
+            "version": "dev-ol4",
+            "package": "mapbender/vis-ui.js"
+        }
+    ],
+    "minimum-stability": "dev",
     "stability-flags": {
         "mapbender/mapbender": 20,
+        "mapbender/digitizer": 20,
+        "mapbender/vis-ui.js": 20,
         "mapbender/coordinates-utility": 20,
         "wheregroup/cookieconsent": 20
     },

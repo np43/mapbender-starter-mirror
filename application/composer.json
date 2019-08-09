@@ -51,7 +51,8 @@
         "mapbender/fom": "^3.0.6.0",
         "mapbender/mapbender": "dev-feature/ol4-ol2-why-not-both@dev",
         "mapbender/owsproxy": "^3.0.6",
-        "mapbender/digitizer": "dev-release/1.4-withDataManager",
+        "mapbender/digitizer": "dev-release/1.4-withDataManager as 1.1.70",
+        "mapbender/vis-ui.js": "dev-ol4 as 0.2.0",
 
         "mapbender/coordinates-utility": "dev-ol4@dev",
         "components/font-awesome": "^4.0",
@@ -134,7 +135,7 @@
             "mapbender/*": "source"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
