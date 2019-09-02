@@ -43,7 +43,7 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        default_connection: default    
+        default_connection: default
         connections:
             default:
                 driver:   %database_driver%
@@ -54,6 +54,29 @@ doctrine:
                 user:     %database_user%
                 password: %database_password%
                 persistent: true
+                charset:  UTF8
+                logging: %kernel.debug%
+                profiling: %kernel.debug%
+            search_db:
+                driver:   %database_digi_driver%
+                host:     %database_digi_host%
+                port:     %database_digi_port%
+                dbname:   %database_digi_name%
+                user:     %database_digi_user%
+                password: %database_digi_password%
+                charset:  UTF8
+                logging: false
+                profiling: false
+                persistent: true
+            zlhr:
+                driver:   %database3_driver%
+                host:     %database3_host%
+                port:     %database3_port%
+                dbname:   %database3_name%
+                path:     %database3_path%
+                user:     %database3_user%
+                password: %database3_password%
+                persistent: false
                 charset:  UTF8
                 logging: %kernel.debug%
                 profiling: %kernel.debug%
